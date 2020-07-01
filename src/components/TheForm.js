@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import questions from './questions';
 
-const TheForm = () => {
+const TheForm = (props) => {
     return (
         <div className={styles.TheForm}>
             <form>
@@ -12,9 +12,13 @@ const TheForm = () => {
                         questions.map( (q, index) => {
                             if(q.startsWith('https://')) {
                                 return (
-                                    <li className={styles.question}>
+                                    <li className={styles.question} key={index}>
                                         <div className={styles.questionContainer}>
-                                            <input type="checkbox" id={index}/>
+                                            <input 
+                                                id={index}
+                                                onChange={(e) => props.handleChange(e)}
+                                                type="checkbox"
+                                            />
                                             <label for={index}>
                                                 <a href={q} target="_blank" rel="noopener noreferrer">?</a>
                                             </label>
@@ -23,9 +27,13 @@ const TheForm = () => {
                                 )
                             } else {
                                 return (
-                                    <li className={styles.question}>
+                                    <li className={styles.question} key={index}>
                                         <div className={styles.questionContainer}>
-                                            <input type="checkbox" id={index}/>
+                                            <input 
+                                                id={index}
+                                                onChange={(e) => props.handleChange(e)}
+                                                type="checkbox" 
+                                            />
                                             <label for={index}>{q}</label>
                                         </div>
                                     </li>
@@ -34,6 +42,19 @@ const TheForm = () => {
                         })
                     }
                 </ol>
+                <div className={styles.btnContainer}>
+                    <button 
+                        onClick={props.finishTest}
+                        className={styles.btnStyles}
+                    >
+                        Calculate My Score!
+                    </button>
+                    <button
+                        className={styles.btnStyles}
+                    >
+                        Clear checkboxes
+                    </button>
+                </div>
             </form>
         </div>
     )
