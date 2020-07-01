@@ -54,7 +54,9 @@ const Results = (props) => {
             <div className={styles.reaction}>
                 {comment}
             </div>
-            <p></p>
+            <p><strong>Find out the uncultured friend in your group.</strong></p>
+            <p><strong>(Screenshot and send/share this please ok thanks)</strong></p>
+            <p><a href="https://veeru153.github.io/true-desi-test">https://veeru153.github.io/true-desi-test</a></p>
             <div className={styles.btnContainer}>
                 <button 
                     onClick={props.redoTest} 

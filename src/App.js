@@ -29,7 +29,7 @@ function App() {
                 <Results score={score} total={questions.length} redoTest={handleResultDisplay}/>
             }
             <p>
-                © OFFICIAL TRUE DESI TEST MADE BY VEERU. DESIGN FROM RICE PURITY TEST.
+                © OFFICIAL TRUE DESI TEST. DESIGN FROM RICE PURITY TEST. 
             </p>
         </div>
     );
