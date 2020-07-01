@@ -19,7 +19,7 @@ const TheForm = (props) => {
                                                 type="checkbox"
                                             />
                                             <label for={index}>
-                                                <a href={q} target="_blank" rel="noopener noreferrer">?</a>
+                                                <a href={q} target="_blank" rel="noopener noreferrer">Click me?</a>
                                             </label>
                                         </div>
                                     </li>

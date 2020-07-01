@@ -77,6 +77,13 @@
     margin: 20px auto;
 }
 
+.reaction {
+    max-width: 100%;
+}
+
+.reaction img {
+    width: 100%;
+}
 
 
 
