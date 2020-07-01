@@ -1,15 +1,16 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import TheForm from './components/TheForm';
 import Results from './components/Results';
-
+import questions from './components/questions';
 
 function App() {
     const [score, setScore] = useState(0);
     const [displayResults, setDisplayResults] = useState(false);
 
     const handleResultDisplay = () => {
+        if(displayResults) setScore(0);
         setDisplayResults(!displayResults);
     }
 
@@ -23,12 +24,12 @@ function App() {
     return (
         <div className="App">
             <Header resultsDisplayed={displayResults}/>
-            {displayResults ? 
-                <TheForm handleChange={handleCheckbox} finishTest={handleResultDisplay} /> : 
-                <Results score={0} total={0} redoTest={handleResultDisplay}/>
+            {!displayResults ? 
+                <TheForm handleChange={handleCheckbox} finishTest={handleResultDisplay} questions={questions} /> : 
+                <Results score={score} total={questions.length} redoTest={handleResultDisplay}/>
             }
             <p>
-                © OFFICIAL TRUE DESI TEST. DESIGN FROM RICE PURITY TEST.
+                © OFFICIAL TRUE DESI TEST MADE BY VEERU. DESIGN FROM RICE PURITY TEST.
             </p>
         </div>
     );

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './styles.module.css';
-import questions from './questions';
 
 const TheForm = (props) => {
     return (
@@ -9,7 +8,7 @@ const TheForm = (props) => {
             <form>
             <ol>
                     {
-                        questions.map( (q, index) => {
+                        props.questions.map( (q, index) => {
                             if(q.startsWith('https://')) {
                                 return (
                                     <li className={styles.question} key={index}>
