@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "feeb5492e68ed243b98852b048c85265",
+    "revision": "42465e48b354f732f756a7f1ace7d9a1",
     "url": "/true-desi-test/index.html"
   },
   {
-    "revision": "449979e11010e10a15d0",
-    "url": "/true-desi-test/static/css/main.19d5f3ae.chunk.css"
+    "revision": "ae8e432582f8e0765244",
+    "url": "/true-desi-test/static/css/main.0cff09d4.chunk.css"
   },
   {
     "revision": "ab907a6b0b269485dd1b",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/true-desi-test/static/js/2.74f9c19f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "449979e11010e10a15d0",
+    "revision": "ae8e432582f8e0765244",
     "url": "/true-desi-test/static/js/main.53ac5c14.chunk.js"
   },
   {
