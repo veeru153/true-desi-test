@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const TheForm = (props) => {
     return (
         <div className={styles.TheForm}>
-            <form>
+            <form onReset={props.resetTest} onSubmit={props.finishTest}>
             <ol>
                     {
                         props.questions.map( (q, index) => {
@@ -43,12 +43,13 @@ const TheForm = (props) => {
                 </ol>
                 <div className={styles.btnContainer}>
                     <button 
-                        onClick={props.finishTest}
+                        type="submit"
                         className={styles.btnStyles}
                     >
                         Calculate My Score!
                     </button>
                     <button
+                        type="reset"
                         className={styles.btnStyles}
                     >
                         Clear checkboxes

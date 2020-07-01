@@ -25,7 +25,7 @@ function App() {
         <div className="App">
             <Header resultsDisplayed={displayResults}/>
             {!displayResults ? 
-                <TheForm handleChange={handleCheckbox} finishTest={handleResultDisplay} questions={questions} /> : 
+                <TheForm handleChange={handleCheckbox} finishTest={handleResultDisplay} questions={questions} resetTest={() => setScore(0)}/> : 
                 <Results score={score} total={questions.length} redoTest={handleResultDisplay}/>
             }
             <p>
